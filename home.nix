@@ -22,9 +22,17 @@
   };
 
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    SSH_AUTH_SOCK = "$XDG_RUNTIME_DIR/ssh-agent.socket";
+    EDITOR = "nvim";
   };
 
   programs.home-manager.enable = true;
   programs.zsh.enable = true;
+  programs.starship.enable = true;
+  programs.zoxide.enable = true;
+
+  home.shellAliases = {
+    VI = "nvim";
+    ll = "ls -al";
+  };
 }
